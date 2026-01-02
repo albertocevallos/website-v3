@@ -299,7 +299,7 @@ export const PrimitivesHero = () => {
 	return (
 		<Section size={{ initial: "2", md: "4" }}>
 			<Container mx={{ initial: "5", xs: "6", sm: "7", md: "9" }}>
-				<Box mb="6">
+				<Box mb="2">
 					<Box mb="5">
 						<SerifHeading mb="3" style={{ maxWidth: 560 }}>
 							Alberto Cevallos
@@ -409,7 +409,7 @@ export const PrimitivesHero = () => {
 											</Heading>
 											<Flex gap="2">
 												<Badge color="blue">DeFi</Badge>
-												<Badge color="blue">Product</Badge>{" "}
+												{/* <Badge color="blue">Product</Badge>{" "} */}
 											</Flex>
 											<Text as="p" size="2" color="gray">
 												I recently co-founded Pye, a new staking primitive on

@@ -23,8 +23,8 @@ export default function PrimitivesHome() {
 			<PrimitivesMobileMenu />
 
 			<TitleAndMetaTags
-				title="Radix Primitives"
-				description="Unstyled, accessible, open source React primitives for high-quality web apps and design systems."
+				title="Alberto Cevallos"
+				description="web 613"
 				image="primitives.png"
 			/>
 			<Box style={{ height: 0 }}>

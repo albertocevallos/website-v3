@@ -1,6 +1,14 @@
 import * as React from "react";
 import NextLink from "next/link";
-import { Box, Text, Link, Flex, Container, Heading } from "@radix-ui/themes";
+import {
+	Box,
+	Text,
+	Link,
+	Flex,
+	Container,
+	Heading,
+	Badge,
+} from "@radix-ui/themes";
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import {
 	Carousel,
@@ -296,16 +304,39 @@ export const PrimitivesHero = () => {
 						<SerifHeading mb="3" style={{ maxWidth: 560 }}>
 							Alberto Cevallos
 						</SerifHeading>
-						<Text size="5" as="p" mb="6" color="gray" style={{ maxWidth: 520 }}>
-							I'm researcher, engineer & tech founder. I'm currently building{" "}
+						<Flex gap="2" mb={"4"}>
+							<NextLink href="https://x.com/albertocevallos" target="_blank">
+								<Badge color="gray">X/Twitter</Badge>
+							</NextLink>
+							<NextLink
+								href="https://www.linkedin.com/in/albertocevallos/"
+								target="_blank"
+							>
+								<Badge color="gray">Linkedin</Badge>
+							</NextLink>{" "}
+						</Flex>
+
+						{/* <Text size="5" as="p" mb="3" color="gray" style={{ maxWidth: 520 }}>
+							I'm a researcher, engineer & tech founder.
+						</Text> */}
+
+						<Text size="5" as="p" mb="8" color="gray" style={{ maxWidth: 700 }}>
+							I'm a researcher, engineer & tech founder. Currently working on{" "}
 							<Link href="https://pye.fi" color="blue" underline="always">
 								Pye
 							</Link>
-							, a new primitive on Solana designed to enable DeFi at the
-							validator layer.
+							, we build DeFi products for validators on Solana. My focus is on
+							mechanism design, product and go-to-market. <br />
+							{/* <Link
+								href="https://x.com/albertocevallos"
+								color="blue"
+								underline="always"
+							>
+								You can find me on X.
+							</Link> */}
 						</Text>
 					</Box>
-					<NextLink href="/primitives/docs" passHref legacyBehavior>
+					{/* <NextLink href="/primitives/docs" passHref legacyBehavior>
 						<Button
 							asChild
 							size={{ initial: "3", xs: "4" }}
@@ -326,7 +357,10 @@ export const PrimitivesHero = () => {
 								</svg>
 							</a>
 						</Button>
-					</NextLink>
+					</NextLink> */}
+					<Heading as="h2" size="5" mb="2" mt="6">
+						Latest work
+					</Heading>
 				</Box>
 			</Container>
 
@@ -360,23 +394,33 @@ export const PrimitivesHero = () => {
 											onKeyDown={onFocusAreaKeyDown}
 											onFocus={onFocusAreaFocus}
 										>
-											<DemoContainer component="dialog">
-												<Flex> here</Flex>
+											<DemoContainer component="pye">
+												<img
+													src="/social/pye-dark.svg"
+													alt="Pye"
+													width={200}
+													height={200}
+												/>
 											</DemoContainer>
 										</FocusArea>
 										<GrabBox>
 											<Heading as="h3" size="3" mb="1">
 												Pye Finance
 											</Heading>
+											<Flex gap="2">
+												<Badge color="blue">DeFi</Badge>
+												<Badge color="blue">Protocol</Badge>{" "}
+											</Flex>
 											<Text as="p" size="2" color="gray">
-												With modal and non-modal modes, fine-grained
-												focus&nbsp;control, accessible to screen readers.
+												Next-gen staking primitive on Solana that enables custom
+												staking terms, trading and DeFi for validators &
+												stakers.
 											</Text>
 										</GrabBox>
 									</CarouselSlide>
 								</Box>
 
-								<Box pr="5">
+								{/* <Box pr="5">
 									<CarouselSlide>
 										<FocusArea
 											aria-label="Dropdown menu component demo"
@@ -389,7 +433,7 @@ export const PrimitivesHero = () => {
 										</FocusArea>
 										<GrabBox>
 											<Heading as="h3" size="3" mb="1">
-												Dropdown Menu
+												Green Oak
 											</Heading>
 											<Text as="p" size="2" color="gray">
 												With submenus, checkable items, collision handling,
@@ -581,7 +625,7 @@ export const PrimitivesHero = () => {
 											</Text>
 										</GrabBox>
 									</CarouselSlide>
-								</Box>
+								</Box> */}
 
 								<Box pr="5">
 									<CarouselSlide>

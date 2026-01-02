@@ -15,15 +15,13 @@ module.exports = {
 	// Next.js config
 	async redirects() {
 		return [
-		
-			
 			{
 				source: "/home",
 				destination: "/",
 				permanent: false,
 			},
 
-				/// START
+			/// START
 			{
 				source: "/blog",
 				destination: "/blog/overview/introduction",
@@ -37,7 +35,7 @@ module.exports = {
 			{
 				source: "/projects",
 				destination: "/projects/2025/pye",
-				permanent: true,
+				permanent: false,
 			},
 			/// END
 		];

@@ -23,6 +23,10 @@
 		}
 	}
 
+	&:where([data-component="pye"]) {
+		background: #17131b;
+	}
+
 	&:where([data-component="dropdown-menu"]) {
 		background: linear-gradient(120deg, var(--crimson-5), var(--blue-5));
 		.dark &,

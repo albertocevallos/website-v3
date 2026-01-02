@@ -19,9 +19,7 @@ export function BlogDocsPage({ children }: { children: React.ReactNode }) {
 			<Flex>
 				<SideNav>
 					<Box pt="4" px="3" pb="9">
-						<Box mb="4">
-							<PrimitivesSearchDesktop />
-						</Box>
+						<Box mb="4">{/* <PrimitivesSearchDesktop /> */}</Box>
 
 						<DocsNav routes={blogRoutes} />
 					</Box>

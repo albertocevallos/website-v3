@@ -1,15 +1,29 @@
 import * as React from "react";
 import { blogRoutes } from "@utils/blogRoutes";
+import { researchRoutes } from "@utils/researchRoutes";
+import { projectsRoutes } from "@utils/projectsRoutes";
 import { Box, ScrollArea } from "@radix-ui/themes";
 import { DocsNav } from "./DocsNav";
 import { MobileMenu } from "./MobileMenu";
 import { PrimitivesHeader } from "./PrimitivesHeader";
 import { PrimitivesSearchMobile } from "./PrimitivesSearchMobile";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { useRouter } from "next/router";
 
 export const PrimitivesMobileMenu = () => {
+	const router = useRouter();
+	let currentRoutes: any[] = [];
+
 	const [mobileSearchOpen, setMobileSearchOpen] = React.useState(false);
 
+	if (router.pathname.startsWith("/blog")) {
+		currentRoutes = blogRoutes;
+	} else if (router.pathname.startsWith("/research")) {
+		currentRoutes = researchRoutes;
+	} else if (router.pathname.startsWith("/projects")) {
+		currentRoutes = projectsRoutes;
+	} else {
+	}
 	return (
 		<MobileMenu>
 			<PrimitivesHeader />
@@ -32,16 +46,20 @@ export const PrimitivesMobileMenu = () => {
 											slug: "primitives",
 										},
 										{
-											title: "Case studies",
-											slug: "primitives/case-studies",
-										},
-										{
 											title: "Blog",
 											slug: "blog",
 										},
+										{
+											title: "Research",
+											slug: "research",
+										},
+										{
+											title: "Projects",
+											slug: "projects",
+										},
 									],
 								},
-								...blogRoutes,
+								...currentRoutes,
 								{
 									label: "Resources",
 									pages: [

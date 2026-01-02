@@ -30,6 +30,13 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Updating Docs
+
+Simple process to follow:
+
+1. Create new MDX file under `./data/blog/[insert_new.mdx]` (same applies for research and projects).
+2. Update routes static file under `./utils/blogRoutes.ts`
+
 ## Authors
 
 - Pedro Duarte ([@peduarte](https://twitter.com/peduarte))

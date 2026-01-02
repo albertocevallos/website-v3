@@ -7,7 +7,11 @@ import { DocsNav } from "./DocsNav";
 import { MobileMenu } from "./MobileMenu";
 import { PrimitivesHeader } from "./PrimitivesHeader";
 import { PrimitivesSearchMobile } from "./PrimitivesSearchMobile";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import {
+	GitHubLogoIcon,
+	LinkedInLogoIcon,
+	TwitterLogoIcon,
+} from "@radix-ui/react-icons";
 import { useRouter } from "next/router";
 
 export const PrimitivesMobileMenu = () => {
@@ -65,8 +69,18 @@ export const PrimitivesMobileMenu = () => {
 									pages: [
 										{
 											title: "GitHub",
-											slug: "https://github.com/radix-ui/primitives",
+											slug: "https://github.com/albertoevallos",
 											icon: <GitHubLogoIcon />,
+										},
+										{
+											title: "X/Twitter",
+											slug: "https://x.com/albertocevallos",
+											icon: <TwitterLogoIcon />,
+										},
+										{
+											title: "LinkedIn",
+											slug: "https://www.linkedin.com/in/albertocevallos/",
+											icon: <LinkedInLogoIcon />,
 										},
 									],
 								},

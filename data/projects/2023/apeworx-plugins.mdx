@@ -1,0 +1,48 @@
+---
+metaTitle: Apeworx Plugins
+metaDescription: A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.
+name: apeworx
+aria: https://www.w3.org/WAI/ARIA/apg/patterns/tooltip
+---
+
+# ApeWorx Plugins
+
+<Text span type="secondary">
+  Jan 10, 2023
+</Text>
+
+### In a tweet
+
+Wrote Python plugins to support Avalanche and Aurora EVMs on [ApeWorx](https://apeworx.io).
+
+### Challenge
+
+Despite [foundry](https://book.getfoundry.sh/) being a super fast smart contract development framework, I still use Python for scripting and testing.
+I've been using [ApeWorx](https://apeworx.io) ever since [Brownie](https://eth-brownie.readthedocs.io/en/stable/) became inactive.
+
+I needed to deploy a couple contracts on Aurora and Avalanche, both of which were not supported by ApeWorx at the time.
+
+### Solution
+
+This project was straightforward, I used the existing Apeworx [plugin template](https://github.com/ApeWorX/project-template) and then setup an `ecosystem.py ` file with the unique configuration of each chain (eg. chain_id, network_id) and hooked it up to the
+ApeWorx plugins api were they are now registered.
+
+### Results
+
+The code for [ape-avalanche](https://github.com/albertocevallos/ape-avalanche/tree/main) and [ape-aurora](https://github.com/albertocevallos/ape-aurora/tree/main) is public on GitHub.
+
+To install use:
+
+```bash
+ape plugins install avalanche
+```
+
+or use the ape config file:
+
+```yaml
+# ape-config.yaml
+plugins:
+  - name: avalanche
+```
+
+You can also find the package on [pypi.org/project/ape-avalanche/](https://pypi.org/project/ape-avalanche/).

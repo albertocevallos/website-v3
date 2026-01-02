@@ -16,41 +16,7 @@ module.exports = {
 	async redirects() {
 		return [
 		
-			{
-				source: "/docs/primitives",
-				destination: "/primitives/docs/overview/introduction",
-				permanent: false,
-			},
-			{
-				source: "/docs/primitives/utilities/aspect-ratio/:slug*",
-				destination: "/primitives/docs/components/aspect-ratio",
-				permanent: true,
-			},
-			{
-				source: "/docs/primitives/utilities/label/:slug*",
-				destination: "/primitives/docs/components/label",
-				permanent: true,
-			},
-			{
-				source: "/primitives/docs/components/:slug/:version",
-				destination: "/primitives/docs/components/:slug",
-				permanent: true,
-			},
-			{
-				source: "/primitives/docs/utilities/:slug/:version",
-				destination: "/primitives/docs/utilities/:slug",
-				permanent: true,
-			},
-			{
-				source: "/docs/primitives/:slug*",
-				destination: "/primitives/docs/:slug*",
-				permanent: true,
-			},
-			{
-				source: "/primitives/docs",
-				destination: "/primitives/docs/overview/introduction",
-				permanent: false,
-			},
+			
 			{
 				source: "/home",
 				destination: "/",
@@ -58,7 +24,6 @@ module.exports = {
 			},
 
 				/// START
-
 			{
 				source: "/blog",
 				destination: "/blog/overview/introduction",
@@ -71,11 +36,9 @@ module.exports = {
 			},
 			{
 				source: "/projects",
-				destination: "/projects/overview/introduction",
-				permanent: false,
+				destination: "/projects/2025/pye",
+				permanent: true,
 			},
-			
-
 			/// END
 		];
 	},

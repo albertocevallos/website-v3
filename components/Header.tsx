@@ -4,7 +4,7 @@ import {
 	AccessibleIcon,
 	Flex,
 	IconButton,
-	Link,
+	Box,
 	Theme,
 	Tooltip,
 } from "@radix-ui/themes";
@@ -249,7 +249,8 @@ const RadixByWorkOSLogoLink = () => (
 		<NextLink href="/" passHref legacyBehavior>
 			<BoxLink>
 				<AccessibleIcon label="Radix Homepage">
-					<RadixLogo />
+					{/* <RadixLogo /> */}
+					<Box>AC</Box>
 				</AccessibleIcon>
 			</BoxLink>
 		</NextLink>

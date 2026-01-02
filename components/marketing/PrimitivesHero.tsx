@@ -297,8 +297,12 @@ export const PrimitivesHero = () => {
 							Alberto Cevallos
 						</SerifHeading>
 						<Text size="5" as="p" mb="6" color="gray" style={{ maxWidth: 520 }}>
-							Unstyled, accessible, open source React primitives for
-							high-quality web apps and design systems.
+							I'm researcher, engineer & tech founder. I'm currently building{" "}
+							<Link href="https://pye.fi" color="blue" underline="always">
+								Pye
+							</Link>
+							, a new primitive on Solana designed to enable DeFi at the
+							validator layer.
 						</Text>
 					</Box>
 					<NextLink href="/primitives/docs" passHref legacyBehavior>
@@ -357,12 +361,12 @@ export const PrimitivesHero = () => {
 											onFocus={onFocusAreaFocus}
 										>
 											<DemoContainer component="dialog">
-												<PrimitivesHeroDialog />
+												<Flex> here</Flex>
 											</DemoContainer>
 										</FocusArea>
 										<GrabBox>
 											<Heading as="h3" size="3" mb="1">
-												Dialog
+												Pye Finance
 											</Heading>
 											<Text as="p" size="2" color="gray">
 												With modal and non-modal modes, fine-grained

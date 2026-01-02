@@ -29,8 +29,10 @@ import {
 	Text,
 } from "@radix-ui/themes";
 import * as themesComponents from "@radix-ui/themes";
+
 import styles from "./MDXComponents.module.css";
 import { classNames } from "@utils/classNames";
+import TweetWrapper from "./MDXTweet";
 
 export const components = {
 	...themesComponents,
@@ -201,6 +203,8 @@ export const components = {
 	HeroContainer,
 	HeroQuote,
 	...Demos,
+	// override Tweet so we can re-run twttr.widgets.load on mount
+	Tweet: TweetWrapper,
 };
 
 const LinkHeading = ({

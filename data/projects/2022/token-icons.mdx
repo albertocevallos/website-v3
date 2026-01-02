@@ -1,0 +1,51 @@
+---
+metaTitle: tokenicons.org
+metaDescription: Animate Radix Primitives with CSS keyframes or the JavaScript animation library of your choice.
+---
+
+# tokenicons.org
+
+<Text span type="secondary">
+  Oct 20, 2022
+</Text>
+
+### In a tweet
+
+I wrote an NPM package and website for [tokenicons.org](https://tokenicons.org/), a free hosting solution for ERC-20 icons.
+
+### Challenge
+
+In Web3, whenever you build a frontend, you go through the following process:
+
+1. Source ERC-20 icons (you'll usually find them on Google)
+2. If you you use AWS, then you store them on an [AWS S3 bucket](https://aws.amazon.com/s3/)
+3. And then host them on [Route 53](https://aws.amazon.com/route53/)
+
+If you're managing more than one frontend, this can get quite expensive. I believe the costs of storing and retrieving these assets could be socialized amongst devs.
+
+### Solution
+
+Inspired by [github.com/trustwallet/assets](https://github.com/trustwallet/assets), I decided to build a repository of ERC-20 assets on top of GitHub. The problem with the current Trust Wallet implementation is that their tokens are no longer up-to-date, and mostly from the ICO era.
+
+I started off by collecting common ERC-20 icons I use in DeFi frontends and hosted them [here](https://github.com/albertocevallos/token-icons/tree/main/assets). I then setup a basic [Vercel website](https://vercel.com/) to let devs visually navigate through the collection.
+
+### Results
+
+I launched [tokenicons.org](https://tokenicons.org/) in late October 2022 and deployed a simple [NPM package](https://www.npmjs.com/package/token-icons) that you can use in your React app. As always, you can find the code for the project [here](https://github.com/albertocevallos/token-icons).
+
+<HeroContainer>
+<img
+  src="/social/tokenicons.gif"
+  alt="tokenicons.org website screenshot"
+  style={{ width: "300px", marginTop: 16, borderRadius: 8, margin:"0 auto" }}/>
+
+</HeroContainer>
+
+
+### Updates
+
+**Oct 2022**
+
+ENS DAO awarded [tokenicons.org](https://tokenicons.org) 1 ETH as part of their "Small Grants"
+program, which aims to sponsor projects building public goods on Ethereum. You can [read more
+about it here](https://www.ensgrants.xyz/rounds/9/proposals/146).

@@ -33,32 +33,6 @@ export default function PrimitivesHome() {
 			<FancyBackground>
 				<PrimitivesHero />
 			</FancyBackground>
-			{/* <CaseStudiesSection />
-			<Container mx={{ initial: "5", xs: "6", sm: "7", md: "9" }}>
-				<Separator size="2" />
-			</Container> */}
-			{/* <Box overflow="hidden">
-				<BenefitsSection />
-				<StatsSection />
-			</Box>
-			<ComponentHighlightsSection />
-			<AccessibilitySection />
-			<DeveloperExperienceSection />
-			<AdoptionSection />
-			<Container mx={{ initial: "5", xs: "6", sm: "7", md: "9" }}>
-				<Separator size="2" />
-			</Container>
-			<Section size={{ initial: "2", md: "4" }}>
-				<Container mx={{ initial: "5", xs: "6", sm: "7", md: "9" }}>
-					<CommunitySection />
-				</Container>
-			</Section>
-			<Container mx={{ initial: "5", xs: "6", sm: "7", md: "9" }}>
-				<Separator size="2" />
-				<Section size={{ initial: "2", md: "4" }} pb="0">
-					<Footer />
-				</Section>
-			</Container> */}
 		</MobileMenuProvider>
 	);
 }

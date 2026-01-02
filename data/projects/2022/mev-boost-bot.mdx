@@ -1,0 +1,30 @@
+---
+metaTitle: MEV-Boost Bot
+metaDescription: Animate Radix Primitives with CSS keyframes or the JavaScript animation library of your choice.
+---
+
+
+# MEV-Boost Bot
+
+<Text span type="secondary">
+  Sep 25, 2022
+</Text>
+
+### In a tweet
+
+I built a [bot](https://twitter.com/MevBoostBot) that tweets out blocks with large rewards from [mev-boost](https://github.com/flashbots/mev-boost-relay) relays.
+
+### Challenge
+
+<Tweet tweetLink="bertcmiller/status/1573688456336887811" />
+
+### Solution
+
+I used Flashbot's [Relay API](https://boost-relay.flashbots.net/) to write a script that scans for block rewards greater than 2e18 (2 ETH). I packaged the script into a [Serverless Lambda](https://www.serverless.com/framework/docs/providers/aws/guide/functions) and hooked it up to Twitter's API.
+Every block, the bot fetches and stores the latest validator payments using [DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB). If a new reward is found and is greater than 2e18, it will throw an alert via Twitter.
+
+As always, you can find the source code on [GitHub](https://github.com/albertocevallos/mev-boost-relay-bot).
+
+### Results
+
+<Tweet tweetLink="mevboostbot/status/2001704605038661749" />

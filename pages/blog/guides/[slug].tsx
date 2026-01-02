@@ -38,11 +38,11 @@ export default function GuidesDoc({ frontmatter, code }: Doc) {
 }
 
 export async function getStaticPaths() {
-	const frontmatters = getAllFrontmatter("primitives/docs/guides");
+	const frontmatters = getAllFrontmatter("blog/guides");
 
 	return {
 		paths: frontmatters.map((frontmatter) => ({
-			params: { slug: frontmatter.slug.replace("primitives/docs/guides/", "") },
+			params: { slug: frontmatter.slug.replace("blog/guides/", "") },
 		})),
 		fallback: false,
 	};
@@ -52,7 +52,7 @@ export async function getStaticProps(
 	context: GetStaticPropsContext<{ slug: string }>,
 ) {
 	const { frontmatter, code } = await getMdxBySlug(
-		"primitives/docs/guides/",
+		"blog/guides/",
 		context.params!.slug,
 	);
 	return { props: { frontmatter, code } };

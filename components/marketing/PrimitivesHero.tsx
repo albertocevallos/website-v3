@@ -294,7 +294,7 @@ export const PrimitivesHero = () => {
 				<Box mb="6">
 					<Box mb="5">
 						<SerifHeading mb="3" style={{ maxWidth: 560 }}>
-							Core building blocks for your design system
+							Alberto Cevallos
 						</SerifHeading>
 						<Text size="5" as="p" mb="6" color="gray" style={{ maxWidth: 520 }}>
 							Unstyled, accessible, open source React primitives for

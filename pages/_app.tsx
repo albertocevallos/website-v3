@@ -4,6 +4,12 @@ import { Router, useRouter } from "next/router";
 import { Theme } from "@radix-ui/themes";
 import { ThemeProvider } from "@components/ThemeProvider";
 import { PrimitivesDocsPage } from "@components/PrimitivesDocsPage";
+/// START
+import { BlogDocsPage } from "@components/BlogDocsPage";
+import { ResearchDocsPage } from "@components/ResearchDocsPage";
+import { ProjectsDocsPage } from "@components/ProjectsDocsPage";
+/// END
+
 import { ColorsDocsPage } from "@components/ColorsDocsPage";
 import { handleUrlChange } from "@utils/analytics";
 import { CssLibPreferenceProvider } from "@components/CssLibPreference";
@@ -40,10 +46,10 @@ function Pages({ Component, pageProps }: AppProps) {
 				grayColor="slate"
 				className="radix-themes-custom-fonts"
 			>
-				<PrimitivesDocsPage>
+				<BlogDocsPage>
 					<Favicon />
 					<Component {...pageProps} />
-				</PrimitivesDocsPage>
+				</BlogDocsPage>
 			</Theme>
 		);
 	}
@@ -55,10 +61,10 @@ function Pages({ Component, pageProps }: AppProps) {
 				grayColor="slate"
 				className="radix-themes-custom-fonts"
 			>
-				<PrimitivesDocsPage>
+				<ResearchDocsPage>
 					<Favicon />
 					<Component {...pageProps} />
-				</PrimitivesDocsPage>
+				</ResearchDocsPage>
 			</Theme>
 		);
 	}
@@ -70,10 +76,10 @@ function Pages({ Component, pageProps }: AppProps) {
 				grayColor="slate"
 				className="radix-themes-custom-fonts"
 			>
-				<PrimitivesDocsPage>
+				<ProjectsDocsPage>
 					<Favicon />
 					<Component {...pageProps} />
-				</PrimitivesDocsPage>
+				</ProjectsDocsPage>
 			</Theme>
 		);
 	}

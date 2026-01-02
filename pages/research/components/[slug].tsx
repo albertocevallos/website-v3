@@ -38,12 +38,12 @@ export default function ComponentsDoc({ frontmatter, code }: Doc) {
 }
 
 export async function getStaticPaths() {
-	const frontmatters = getAllFrontmatter("primitives/docs/components");
+	const frontmatters = getAllFrontmatter("research/components");
 
 	return {
 		paths: frontmatters.map((frontmatter) => ({
 			params: {
-				slug: frontmatter.slug.replace("primitives/docs/components/", ""),
+				slug: frontmatter.slug.replace("research/components/", ""),
 			},
 		})),
 		fallback: false,
@@ -55,7 +55,7 @@ export async function getStaticProps(
 ) {
 	const componentName = context.params!.slug;
 	const { frontmatter, code } = await getMdxBySlug(
-		"primitives/docs/components/",
+		"research/components/",
 		componentName,
 	);
 

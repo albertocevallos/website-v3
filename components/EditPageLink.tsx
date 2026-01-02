@@ -18,7 +18,7 @@ export function EditPageLink() {
 	return (
 		<Box>
 			{/* <Separator size="2" my="8" /> */}
-			{/* <Link
+			<Link
 				href={editUrl}
 				title="Edit this page on GitHub."
 				rel="noopener noreferrer"
@@ -26,8 +26,8 @@ export function EditPageLink() {
 				color="gray"
 				size="2"
 			>
-				Edit this page on GitHub.
-			</Link> */}
+				Last updated: Jan 2, 2026
+			</Link>
 		</Box>
 	);
 }

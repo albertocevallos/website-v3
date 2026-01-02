@@ -13,7 +13,7 @@ type TitleAndMetaTagsProps = {
 
 export function TitleAndMetaTags({
 	title = "Alberto Cevallos",
-	description = "web 613",
+	description = "Personal Website",
 	image,
 	url = "https://albertocevallos.com",
 	pathname,
@@ -38,7 +38,7 @@ export function TitleAndMetaTags({
 			<meta property="og:description" content={description} />
 			{imageUrl && <meta property="og:image" content={imageUrl} />}
 
-			<meta name="twitter:site" content="@radix_ui" />
+			<meta name="twitter:site" content="@albertocevallos" />
 			<meta name="twitter:card" content="summary_large_image" />
 		</Head>
 	);

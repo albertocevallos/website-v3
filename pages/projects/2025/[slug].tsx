@@ -32,29 +32,27 @@ export default function OverviewDoc({ frontmatter, code }: Doc) {
 				image="thumb.svg"
 			/>
 
-			<MDXProvider frontmatter={frontmatter}>
-				<Box>
-					<MDXProvider frontmatter={frontmatter}>
-						<Component components={components as any} />
-					</MDXProvider>
-					<Flex align="center" gap="3" mt="8">
-						<Avatar
-							size="5"
-							src={frontmatter.authorAvatarUrl as string}
-							aria-label={frontmatter.author as string}
-							fallback={null as any}
-							radius="full"
-						/>
-						<Box id="author">
-							<Text as="p" weight="bold">
-								{frontmatter.author as string}
-							</Text>
-							<Text as="p">{frontmatter.authorPosition as string}</Text>
-						</Box>
-					</Flex>
-					<Separator size="3" mt={{ initial: "7", md: "9" }} />
-				</Box>
-			</MDXProvider>
+			<Box>
+				<MDXProvider frontmatter={frontmatter}>
+					<Component components={components as any} />
+				</MDXProvider>
+				<Flex align="center" gap="3" mt="8">
+					<Avatar
+						size="5"
+						src={frontmatter.authorAvatarUrl as string}
+						aria-label={frontmatter.author as string}
+						fallback={null as any}
+						radius="full"
+					/>
+					<Box id="author">
+						<Text as="p" weight="bold">
+							{frontmatter.author as string}
+						</Text>
+						<Text as="p">{frontmatter.authorPosition as string}</Text>
+					</Box>
+				</Flex>
+				<Separator size="3" mt={{ initial: "7", md: "9" }} />
+			</Box>
 
 			<QuickNav key={frontmatter.slug} />
 		</>

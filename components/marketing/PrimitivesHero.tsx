@@ -412,9 +412,8 @@ export const PrimitivesHero = () => {
 												<Badge color="blue">Product</Badge>{" "}
 											</Flex>
 											<Text as="p" size="2" color="gray">
-												Next-gen staking primitive on Solana that enables custom
-												staking terms, trading and DeFi for validators &
-												stakers.
+												I recently co-founded Pye, a new staking primitive on
+												Solana that enables DeFi at the validator layer.
 											</Text>
 										</GrabBox>
 									</CarouselSlide>
@@ -636,7 +635,7 @@ export const PrimitivesHero = () => {
 											<DemoContainer ariaUnhide>
 												<Flex align="center" direction="column" gap="2">
 													<Text size="2" color="gray">
-														See more components in the docs
+														View previous work in the projects section
 													</Text>
 													<NextLink href="/projects" passHref legacyBehavior>
 														<Link
@@ -649,7 +648,7 @@ export const PrimitivesHero = () => {
 																gap: "var(--space-1)",
 															}}
 														>
-															View docs
+															View all
 															<ArrowRightIcon />
 														</Link>
 													</NextLink>

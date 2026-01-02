@@ -7,6 +7,9 @@ import { getAllFrontmatter, getMdxBySlug } from "@utils/mdx";
 import { getPackageData, formatBytes } from "@utils/bundlephobia";
 import type { Frontmatter } from "types/frontmatter";
 import { GetStaticPropsContext } from "next";
+import { Box, Flex, Link, Text, Heading } from "@radix-ui/themes";
+import { Avatar } from "@radix-ui/themes";
+import { Separator } from "@radix-ui/themes";
 
 type Doc = {
 	frontmatter: Frontmatter;
@@ -23,13 +26,33 @@ export default function ComponentsDoc({ frontmatter, code }: Doc) {
 			</div>
 
 			<TitleAndMetaTags
-				title={`${frontmatter.metaTitle} – Radix Primitives`}
+				title={`${frontmatter.metaTitle} – Alberto Cevallos`}
 				description={frontmatter.metaDescription}
-				image="primitives.png"
+				image="thumb.svg"
 			/>
 
 			<MDXProvider frontmatter={frontmatter}>
-				<Component components={components as any} />
+				<Box>
+					<MDXProvider frontmatter={frontmatter}>
+						<Component components={components as any} />
+					</MDXProvider>
+					<Flex align="center" gap="3" mt="8">
+						<Avatar
+							size="5"
+							src={frontmatter.authorAvatarUrl as string}
+							aria-label={frontmatter.author as string}
+							fallback={null as any}
+							radius="full"
+						/>
+						<Box id="author">
+							<Text as="p" weight="bold">
+								{frontmatter.author as string}
+							</Text>
+							<Text as="p">{frontmatter.authorPosition as string}</Text>
+						</Box>
+					</Flex>
+					<Separator size="3" mt={{ initial: "7", md: "9" }} />
+				</Box>{" "}
 			</MDXProvider>
 
 			<QuickNav key={frontmatter.slug} />

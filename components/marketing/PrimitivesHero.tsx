@@ -409,7 +409,7 @@ export const PrimitivesHero = () => {
 											</Heading>
 											<Flex gap="2">
 												<Badge color="blue">DeFi</Badge>
-												<Badge color="blue">Protocol</Badge>{" "}
+												<Badge color="blue">Product</Badge>{" "}
 											</Flex>
 											<Text as="p" size="2" color="gray">
 												Next-gen staking primitive on Solana that enables custom
@@ -638,11 +638,7 @@ export const PrimitivesHero = () => {
 													<Text size="2" color="gray">
 														See more components in the docs
 													</Text>
-													<NextLink
-														href="/primitives/docs/overview/getting-started"
-														passHref
-														legacyBehavior
-													>
+													<NextLink href="/projects" passHref legacyBehavior>
 														<Link
 															size="3"
 															highContrast

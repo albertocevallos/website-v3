@@ -23,9 +23,9 @@ export default function OverviewDoc({ frontmatter, code }: Doc) {
 			</div>
 
 			<TitleAndMetaTags
-				title={`${frontmatter.metaTitle} – Radix Primitives`}
+				title={`${frontmatter.metaTitle} – Alberto Cevallos`}
 				description={frontmatter.metaDescription}
-				image="primitives.png"
+				image="thumb.svg"
 			/>
 
 			<MDXProvider frontmatter={frontmatter}>

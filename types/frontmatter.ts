@@ -1,4 +1,7 @@
 export type Frontmatter = {
+	author?: string;
+	authorAvatarUrl?: string;
+	authorPosition?: string;
 	metaTitle: string;
 	metaDescription?: string;
 	publishedAt?: string;

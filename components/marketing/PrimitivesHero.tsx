@@ -299,7 +299,7 @@ export const PrimitivesHero = () => {
 	return (
 		<Section size={{ initial: "2", md: "4" }}>
 			<Container mx={{ initial: "5", xs: "6", sm: "7", md: "9" }}>
-				<Box mb="2">
+				<Box mb="4">
 					<Box mb="5">
 						<SerifHeading mb="3" style={{ maxWidth: 560 }}>
 							Alberto Cevallos

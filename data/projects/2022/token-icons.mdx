@@ -5,13 +5,19 @@ metaDescription: Animate Radix Primitives with CSS keyframes or the JavaScript a
 
 # tokenicons.org
 
-<Text span type="secondary">
-  Oct 20, 2022
-</Text>
+<Description> Oct 20, 2022</Description>
 
 ### In a tweet
 
 I wrote an NPM package and website for [tokenicons.org](https://tokenicons.org/), a free hosting solution for ERC-20 icons.
+
+<HeroContainer>
+	<img
+		src="/social/tokenicons.gif"
+		alt="tokenicons.org website screenshot"
+		style={{ width: "300px", marginTop: 16, borderRadius: 8 }}
+	/>
+</HeroContainer>
 
 ### Challenge
 
@@ -29,18 +35,21 @@ Inspired by [github.com/trustwallet/assets](https://github.com/trustwallet/asset
 
 I started off by collecting common ERC-20 icons I use in DeFi frontends and hosted them [here](https://github.com/albertocevallos/token-icons/tree/main/assets). I then setup a basic [Vercel website](https://vercel.com/) to let devs visually navigate through the collection.
 
+```tsx
+import { image } from 'token-icons'
+
+const Example = () => {
+
+    return (
+        <img src={image('0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9')} />
+    );
+  }
+}
+```
+
 ### Results
 
 I launched [tokenicons.org](https://tokenicons.org/) in late October 2022 and deployed a simple [NPM package](https://www.npmjs.com/package/token-icons) that you can use in your React app. As always, you can find the code for the project [here](https://github.com/albertocevallos/token-icons).
-
-<HeroContainer>
-<img
-  src="/social/tokenicons.gif"
-  alt="tokenicons.org website screenshot"
-  style={{ width: "300px", marginTop: 16, borderRadius: 8, margin:"0 auto" }}/>
-
-</HeroContainer>
-
 
 ### Updates
 
